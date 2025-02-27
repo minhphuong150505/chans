@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static class Test {  // Thêm static để có thể truy cập trong main
         public int a;
@@ -10,9 +12,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a  = sc.nextInt();
+        int b = sc.nextInt();
         System.out.println("Hello World");
-        Test a = new Test(1, 2);  // Đúng cú pháp
-        int c = a.a + a.b;
+        int c = a + b;  // Lỗi vì a không phải kiểu int 
         System.out.println(c);
+        sc.close();
     }
 }
